@@ -409,10 +409,10 @@ UITableViewDataSource
     _menuBackView.frame = CGRectMake(0, 0, YBScreenWidth, YBScreenHeight);
     CGFloat height;
     if (_titles.count > _maxVisibleCount) {
-        height = _itemHeight * _maxVisibleCount + _borderWidth * 2;
+        height = _itemHeight * _maxVisibleCount + _borderWidth * 2 + _tableView.contentInset.top + _tableView.contentInset.bottom;
         self.tableView.bounces = YES;
     }else {
-        height = _itemHeight * _titles.count + _borderWidth * 2;
+        height = _itemHeight * _titles.count + _borderWidth * 2 + _tableView.contentInset.top + _tableView.contentInset.bottom;
         self.tableView.bounces = NO;
     }
      _isChangeDirection = NO;
